@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "pm2": "^5.4.3",
+    "sequelize": "^6.37.5",
+    "validator": "^13.12.0"
+  }
+}
