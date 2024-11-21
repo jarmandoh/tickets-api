@@ -5,7 +5,11 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser')
 const compression = require('compression')
 
+
 const app = express();
+const port = process.env.PORT || 10000;
+
+
 app.use(helmet());
 app.use(bodyParser.json({limit: '500mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
@@ -20,6 +24,6 @@ db.sequelize.sync({force: false}).then(() =>{
 require('./app/routes/users.routes.js')(app)
 require('./app/routes/companies.routes.js')(app)
 
-const server  = app.listen(3000, ()=> {
+const server  = app.listen(port, ()=> {
     console.error("Servidor iniciado!!!")
 })
